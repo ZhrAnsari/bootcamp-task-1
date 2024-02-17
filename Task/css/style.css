@@ -1,0 +1,202 @@
+/* Reset */
+*,
+* ::before,
+* ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Root Variables */
+html{
+    font-size:62.5%;
+}
+:root{
+    --color-primary:#219F95;
+    --color-primary-light:#696969;
+    --color-secondary-dark:#234894; 
+    --color-secondary-light:#AFCEDD;
+    --color-white:#FFFFFF;
+    --color-headings:#1E1E1E;
+}
+body{
+    font-size: 1.4rem;
+    line-height: 1.7;
+}
+h1,h2,h3{
+    color: var(--color-headings);
+}
+h1{
+    font-size: 2.5rem;
+}
+h2{
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-headings);
+}
+@media screen and (min-width:1024px) {
+    body{
+        font-size: 1.8rem;
+    }
+    h1{
+        font-size: 5rem;
+    }
+    h2{
+        font-size: 2.2rem;
+        margin-bottom: 3.5rem;
+        margin-top: 3.1rem;
+    }
+}
+/* Buttons */
+.btn{
+    outline: 0;
+    border: 0;
+    border-radius: 0.8rem;
+    padding: 1.75rem 2rem;
+    margin: 0.75rem 0;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.6rem;
+    white-space: nowrap;
+}
+.btn--primary{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+@media screen and (min-width:1024px) {
+    .btn{
+        font-size: 1.6rem;
+    }
+}
+/* Badge */
+.badge{
+    display: inline-block;
+    font-weight: bold;
+    border-radius: 0.6rem;
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--color-secondary-light);
+    background-color: #fff;
+    color: var(--color-secondary-dark);
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+.badge--primary{
+    background-color: var(--color-secondary-light);
+}
+@media screen and (min-width:1024px) {
+    .badge{
+        font-size: 1.4rem;
+    }
+}
+/* Container */
+.container{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+/* Main-Box */
+.main-box{
+    width: 100vw;
+    height:calc(100vh - 4rem); 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    padding: 1rem 2rem;
+}
+@media screen and (min-width:1024px) {
+    .main-box{
+        padding: 0rem 0rem;
+    }
+}
+/* Main-Body */
+.main-body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3%;
+}
+@media screen and (min-width:768px) {
+    .main-body{
+        grid-template-columns: repeat(2,1fr)
+    }
+}
+@media screen and (min-width:1024px) {
+    .main-body{
+        grid-template-columns: repeat(3,1fr)
+    }
+}
+.body__items .items__knowledgeable{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.body__items .items__knowledgeable .badge{
+    margin-top: 1.7rem;
+    font-size: 2rem;
+}
+.dedicated-font{
+    font-family: "YekanNumbers";
+}
+.items--name{
+    font-size: 1.6rem; 
+    font-weight: 600; 
+    color: var(--color-secondary-dark);
+    margin-top: 2.5rem;
+    margin-right: 0.75rem;
+}
+.items__date{
+    font-size: 1.4rem; 
+    font-weight: 400;   
+    color: var(--color-primary-light);
+    margin-top: 2.5rem;
+    margin-left: 1.2rem;
+}
+/* Items__Introduction */
+.items--title{
+    font-size: 1.8rem ;
+    font-weight: bold;
+    color: var(--color-headings);
+    margin-top: 1.75rem;
+}
+.items__barcode{
+    display: flex;
+}
+.items--explanation{
+    font-size: 1.2rem ;
+    font-weight: 400;
+    color: var(--color-primary-light);
+}
+.items__exchange{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+.items__personal-information{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.items__personal-information p{
+    font-size: 1.2rem ;
+    font-weight: 700;
+    color: var(--color-headings);
+    margin-right: 0.5rem;
+}
+.items__personal-information img{
+    object-fit: cover;
+    width: 40px;
+    height: 40px;
+    border-radius: 0.6rem;
+}
+@media screen and (min-width:768px) {
+    .items__personal-information p{
+        font-size: 1.4rem ;
+    }
+}
+@media screen and (min-width:1024px) {
+    .items__personal-information p{
+        font-size: 1.6rem ;
+    }
+}
